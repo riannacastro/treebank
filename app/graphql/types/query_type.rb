@@ -4,10 +4,15 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    field :users, [Types::UserType], null: false, description: "Return a list of users"
+    field :users, [Types::UserType], null: true
+    field :accounts, [Types::AccountType], null: true
 
     def users
       User.all
+    end
+
+    def accounts
+      Account.all
     end
 
   end

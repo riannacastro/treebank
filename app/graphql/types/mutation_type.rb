@@ -3,6 +3,10 @@ module Types
     # TODO: remove me
     field :test_field, String, null: false,
       description: "An example field added by the generator"
+
+    # Accounts
+    field :create_account, mutation: Mutations::CreateAccount
+
     def test_field
       "Hello World"
     end
