@@ -6,6 +6,7 @@ module Types
 
     # Accounts
     field :create_account, mutation: Mutations::CreateAccount
+    field :destroy_account, mutation: Mutations::DestroyAccount
 
     def test_field
       "Hello World"
